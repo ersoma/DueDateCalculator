@@ -36,9 +36,10 @@ npm run build_global
 
 ## Technologies
 The following technologies / modules were used during the development:
+
 | Technology | Description |
-| --- | --- |
-| [Browserify](http://browserify.org/) | Browserify lets you require('modules') in the browser by bundling up all of your dependencies. |
+| ---------------- | ---------------- |
+| [Browserify](http://browserify.org/) | Browserify lets you require('modules') in the browser by bundling up all of your dependencies.  |
 | [Bootstrap](http://getbootstrap.com/) | The most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web. |
 | [dateformat](https://www.npmjs.com/package/dateformat) | A node.js package for Steven Levithan's excellent dateFormat() function. |
 | [chai](http://chaijs.com/) | Chai is a BDD / TDD assertion library that can be delightfully paired with any javascript testing framework. |
