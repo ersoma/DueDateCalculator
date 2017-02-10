@@ -30,6 +30,19 @@ describe('calculateDueDate function ', function () {
         done();
     });
 
+    it('should increment submit date with 4 business hours (finish after weekend)', function (done) {
+        // Arrange
+        var submitDate = new Date("2017-02-10 16:00");
+        var expectedDate = new Date("2017-02-13 12:00");
+        var turnaroundTime = 4;
+        // Act
+        var calculatedDate = calculateDueDate(submitDate, turnaroundTime);
+        // Assert
+        expect(calculatedDate).to.be.an('Date');
+        expect(calculatedDate.getTime()).to.be.equal(expectedDate.getTime());
+        done();
+    });
+
     it('should increment submit date with 8 business hours (finish next day same time)', function (done) {
         // Arrange
         var submitDate = new Date("2017-02-9 12:12");

@@ -55,10 +55,13 @@ module.exports = function (submitDate, turnaroundTime) {
      */
     function calculateExtraDays(fullDays, startDay) {
         var extraDays = 0;
-        for (var i = 1; i <= fullDays; i++) {
-            if (workLimits.WEEKEND_DAYS.indexOf((startDay + i) % 7) > -1) {
+        while (fullDays !== 0) {
+            if (workLimits.WEEKEND_DAYS.indexOf((startDay + 1) % 7) > -1) {
                 extraDays++;
+            } else {
+                fullDays--;
             }
+            startDay++;
         }
         return extraDays;
     }
@@ -121,7 +124,9 @@ module.exports = function (submitDate, turnaroundTime) {
             (_submitDate.getHours() * 60 + _submitDate.getMinutes());
 
         // 4.
-        var extraDays = calculateExtraDays(fullDays, _submitDate.getDay());
+        var inputDays = fullDays;
+        inputDays += remainingMinutesThatDay < remaningMinutes ? 1 : 0;
+        var extraDays = calculateExtraDays(inputDays, _submitDate.getDay());
 
         // 5.
         if (remainingMinutesThatDay < remaningMinutes) {
