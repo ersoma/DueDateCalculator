@@ -1,0 +1,22 @@
+{
+  "name": "due-date-calculator",
+  "version": "1.0.0",
+  "description": "Returns the input date incremented by the specified working hours",
+  "main": "src/calculateDueDate.js",
+  "scripts": {
+    "build": "node ./node_modules/browserify/bin/cmd -e ./src/main.js -o ./build/bundle.js",
+    "build_global": "browserify -e ./src/main.js -o ./build/bundle.js",
+    "test": "node ./node_modules/mocha/bin/mocha --recursive",
+    "test_global": "mocha --recursive"
+  },
+  "author": "Soma Erdélyi <info@somaerdelyi.net>",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^14.0.0",
+    "dateformat": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

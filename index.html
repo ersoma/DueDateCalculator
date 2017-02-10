@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Due Date Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                <br>
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Due Date Calculator</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <form id="calculateDueDate">
+                                <div class="form-group col-md-6">
+                                    <label for="submitDate_date">Date of submittion</label>
+                                    <input class="form-control" id="submitDate_date" type="date" required="required" />
+                                </div>
+                                <div class="form-group col-md-3 col-sm-6">
+                                    <label for="submitDate_hour">Hours</label>
+                                    <input class="form-control" id="submitDate_hour" type="number" required="required" min="0" max="23" placeholder="Hours" />
+                                </div>
+                                <div class="form-group col-md-3 col-sm-6">
+                                    <label for="submitDate_minute">Minutes</label>
+                                    <input class="form-control" id="submitDate_minute" type="number" required="required" min="0" max="59" placeholder="Minutes"
+                                    />
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <label for="turnaroundTime">Turnaround time in hours</label>
+                                    <input class="form-control" id="turnaroundTime" type="number" required="required" min="1" />
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <label for="dueDate">Calculated due date</label>
+                                    <input class="form-control" id="dueDate" type="text" value="Click submit to calculate" readonly="readonly" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="panel-footer">
+                        © Copyright 2017, Soma Erdélyi
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="build/bundle.js"></script>
+</body>
+
+</html>
